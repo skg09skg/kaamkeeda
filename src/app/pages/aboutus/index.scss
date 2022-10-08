@@ -1,0 +1,868 @@
+.about {
+    padding: 40px;
+
+    &__container {
+        padding: 0 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__header {
+        text-align: center;
+
+        h2 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #f55747;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+            color: #00214a;
+        }
+    }
+
+    &__sections {
+        display: flex;
+        text-align: center;
+        padding: 0 60px;
+    }
+
+    &__section {
+        img {
+            width: 8%;
+            padding: 40px;
+            border-radius: 50%;
+            background-color: #00214a;
+        }
+
+        h5 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #123f5c;
+        }
+
+        p {
+            color: black;
+            font-size: 18px;
+        }
+    }
+}
+
+.section1 {
+    width: 30%;
+}
+
+.section2 {
+    margin-top: 160px;
+    width: 40%;
+}
+
+.section3 {
+    width: 30%;
+}
+
+.how-it-works {
+    padding: 40px 40px 140px 40px;
+    background-color: #feebdd7a;
+
+    &__container {
+        padding: 0 40px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__header {
+        padding: 0 0 40px 160px;
+        color: #123f5c;
+
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 10px 0;
+            color: #383232;
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__image {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__sections {
+        width: 100%;
+        display: flex;
+
+        img {
+            width: 12%;
+        }
+    }
+
+    &__section1 {
+        &__div {
+            position: relative;
+            width: 70%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: -4.3%;
+            margin-left: 3%;
+        }
+
+        h4 {
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            color: #123f5c;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            line-height: 30px;
+            font-size: 18px;
+            color: black;
+        }
+    }
+
+    &__section2 {
+        position: relative;
+
+        img {
+            width: 14%;
+        }
+
+        &__div {
+            width: 75%;
+            position: relative;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: -4.2%;
+            margin-left: 3%;
+        }
+
+        h4 {
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            color: #123f5c;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            line-height: 30px;
+            font-size: 18px;
+            color: black;
+        }
+    }
+
+    // &__scroll {
+    //     height: 150px;
+    //     overflow-y: scroll;
+    // }
+    &__points {
+        display: flex;
+    }
+
+    &__dot {
+        font-size: 30px !important;
+    }
+
+    &__point {
+        padding-left: 5px;
+    }
+}
+
+.job-listing {
+    padding: 40px;
+
+    &__container {
+        padding: 0 40px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__header {
+        text-align: center;
+
+        h1 {
+            font-size: 36px;
+            color: #00214a;
+            margin: 0 0 20px 0;
+        }
+
+        p {
+            font-size: 20px;
+            color: black;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__sections {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 80px;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    &__section:hover {
+        background-color: #00214a;
+
+        h4 {
+            color: white;
+        }
+    }
+
+    &__section {
+        width: 22%;
+        margin: 1rem 0;
+        text-align: center;
+        background-color: white;
+        padding: 50px 0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 0px 2px lightgrey;
+        cursor: pointer;
+
+        img {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 50%;
+            border: 1px solid lightgray;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 24px;
+            margin: 0;
+            color: #00214a;
+        }
+    }
+}
+
+.testmonials {
+    background-color: #feebdd7a;
+    padding: 40px;
+
+    &__container {
+        padding: 0 40px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__header {
+        text-align: center;
+
+        h3 {
+            font-size: 22px;
+            color: #f55747;
+            margin: 0 0 10px 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 10px 0;
+            color: #00214a;
+        }
+    }
+
+    &__sections-ipad {
+        display: none;
+    }
+
+    &__sections-mb {
+        display: none;
+
+        h5 {
+            transform: rotate(180deg);
+            font-size: 20px;
+            text-align: end;
+            margin: 0;
+        }
+
+        h4 {
+            transform: rotate(0deg);
+            font-size: 20px;
+            text-align: end;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 0;
+            text-align: justify;
+        }
+    }
+
+    &__sections {
+        margin-top: 40px;
+
+        h5 {
+            transform: rotate(180deg);
+            font-size: 30px;
+            text-align: end;
+            margin: 0;
+        }
+
+        h4 {
+            transform: rotate(0deg);
+            font-size: 30px;
+            text-align: end;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 0;
+            text-align: justify;
+        }
+    }
+
+    &__section {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 25%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        padding-left: 20px;
+
+        h3 {
+            font-size: 26px;
+            margin: 10px 0;
+        }
+
+        h6 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    }
+}
+
+.bVoXXg {
+    width: 90%;
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.bXvhnh {
+    grid-gap: 50px !important;
+    margin: 0 3vw;
+}
+
+// .bdowaa {
+//     margin: 0 40px;
+// }
+
+.bghjHX {
+    margin: 0 20px;
+}
+
+.playstore {
+    padding: 40px;
+    background-color: #123f5c;
+
+    &__container {
+        padding: 0 40px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__section {
+        display: flex;
+        padding: 80px 0;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 50px;
+            color: white;
+
+            span {
+                color: #f55747;
+            }
+        }
+
+        a {
+            img {
+                width: 85%;
+                margin-left: 80px;
+            }
+        }
+    }
+}
+
+.faq {
+    padding: 40px;
+
+    &__container {
+        padding: 0 40px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px;
+    }
+
+    &__image {
+        width: 45%;
+
+        img {
+            width: 90%;
+        }
+    }
+
+    &__content {
+        width: 50%;
+
+        span {
+            color: #f55747;
+            font-size: 22px;
+        }
+    }
+}
+
+.styles_faq-row-wrapper__3vA1D {
+    margin-top: 20px;
+}
+
+.styles_faq-row-wrapper__3vA1D h2 {
+    color: #123f5c !important;
+    font-size: 40px !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+    .about {
+        padding: 20px;
+
+        &__sections {
+            padding: 0;
+            flex-direction: column;
+        }
+    }
+
+    .section1 {
+        width: 100%;
+    }
+
+    .section2 {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .section3 {
+        width: 100%;
+    }
+
+    .how-it-works {
+        padding: 20px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__header {
+            padding: 0px;
+            text-align: center;
+        }
+
+        &__content {
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__sections {
+            width: 100%;
+            flex-direction: column;
+
+            img {
+                width: 20%;
+            }
+        }
+
+        &__section1 {
+            &__div {
+                position: relative;
+                width: 90%;
+                padding: 20px;
+                margin-left: 0;
+                margin-top: -6.5%;
+            }
+        }
+
+        &__section2 {
+            img {
+                width: 24%;
+            }
+
+            &__div {
+                width: 90%;
+                padding: 20px;
+                margin-left: 0;
+                margin-top: -6.7%;
+            }
+        }
+    }
+
+    .job-listing {
+        padding: 20px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__header {
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+        &__sections {
+            padding: 0;
+        }
+
+        &__section {
+            width: 45%;
+            padding: 20px 0;
+
+            img {
+                padding: 15%;
+            }
+        }
+    }
+
+    .testmonials {
+        padding: 20px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__header {
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        &__content {
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        &__sections {
+            display: none;
+        }
+
+        &__sections-mb {
+            display: block;
+            margin-top: 20px;
+        }
+
+        &__sections-ipad {
+            display: none;
+        }
+    }
+
+    .gqFfkb {
+        grid-template-columns: repeat(1, 95%) !important;
+        grid-template-rows: 1fr;
+    }
+
+    .playstore {
+        padding: 20px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__section {
+            padding: 40px 0;
+            flex-direction: column;
+            text-align: center;
+
+            h1 {
+                font-size: 34px;
+                margin: 0 0 20px 0;
+            }
+
+            a {
+                img {
+                    width: 70%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .faq {
+        padding: 20px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__section {
+            padding: 0;
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+    .about {
+        &__container {
+            padding: 0;
+        }
+
+        &__sections {
+            padding: 0;
+        }
+    }
+
+    .how-it-works {
+        padding: 40px;
+
+        &__container {
+            padding: 0;
+        }
+
+        &__header {
+            padding: 0;
+            text-align: center;
+        }
+
+        &__content {
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__sections {
+            flex-direction: column;
+        }
+
+        &__section1 {
+            &__div {
+                padding: 20px;
+                width: 90%;
+                margin-top: -4.9%;
+                margin-left: 2%;
+            }
+        }
+
+        &__section2 {
+            img {
+                width: 14%;
+            }
+
+            &__div {
+                padding: 20px;
+                width: 90%;
+                margin-top: -4.8%;
+                margin-left: 2%;
+            }
+        }
+    }
+
+    .job-listing {
+        &__container {
+            padding: 0;
+        }
+
+        &__sections {
+            padding: 0;
+            justify-content: flex-start;
+        }
+
+        &__section {
+            width: 30%;
+            margin: 1.6%;
+        }
+    }
+
+    .testmonials {
+        &__section {
+            img {
+                width: 30%;
+            }
+        }
+
+        &__content {
+            padding-left: 10px;
+
+            h3 {
+                font-size: 22px;
+            }
+
+            h6 {
+                font-size: 14px;
+            }
+        }
+        &__sections-ipad {
+            display: block;
+        }
+        &__sections {
+            display: none;
+        }
+    }
+
+    .bXvhnh {
+        grid-gap: 40px !important;
+    }
+    .dQMmGc {
+        grid-gap: 30px !important;
+    }
+
+    .bVoXXg {
+        width: 85%;
+        padding: 30px 20px;
+    }
+
+    .bghjHX {
+        margin: 0 !important;
+    }
+
+    .playstore {
+        &__container {
+            padding: 0;
+        }
+
+        &__section {
+            padding: 20px 0;
+            text-align: center;
+
+            h1 {
+                font-size: 32px;
+                width: 75%;
+            }
+
+            a {
+                img {
+                    width: 70%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .faq {
+        &__container {
+            padding: 0;
+        }
+
+        &__section {
+            padding: 0;
+        }
+
+        &__image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1420px) {
+    .how-it-works {
+        &__image {
+            width: 55%;
+        }
+
+        &__sections {
+            width: 100%;
+        }
+        &__section1 {
+            &__div {
+                width: 72%;
+            }
+        }
+        &__section2 {
+            &__div {
+                width: 78%;
+            }
+        }
+    }
+
+    .job-listing {
+        &__sections {
+            padding: 0 20px;
+        }
+    }
+
+    .playstore {
+        &__section {
+            h1 {
+                font-size: 40px;
+            }
+
+            a {
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .faq {
+        &__section {
+            padding: 40px 20px;
+        }
+
+        &__image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .bVoXXg {
+        width: 85%;
+    }
+    .bdowaa {
+        margin: 0 20px;
+    }
+
+    .bXvhnh {
+        grid-gap: 30px !important;
+    }
+}
+
+.styles_faq-row-wrapper__3vA1D
+    .styles_row-body__1NvUo
+    .styles_faq-row__2YF3c
+    .styles_row-title__1YiiY
+    .styles_row-title-text__1MuhU {
+    font-weight: 600;
+}
+
+.bqyzQp {
+    font-family: "Montserrat", sans-serif;
+}
