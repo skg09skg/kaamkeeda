@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
 import icon from '../../../assets/images/iconnew.png';
+import icon1 from '../../../assets/images/icon11.png';
+import icon2 from '../../../assets/images/icon22.png';
+import icon3 from '../../../assets/images/icon33.png';
 import how from '../../../assets/images/Howitworks.png';
 import img1 from '../../../assets/images/01.png';
 import img2 from '../../../assets/images/02.png';
 import iconblue from '../../../assets/images/iconb.png';
+import iconjob from '../../../assets/images/job.svg';
 import Carousel from 'react-grid-carousel'
 import testmonial from '../../../assets/images/test.png';
+import testmonial1 from '../../../assets/images/test11.png';
+import testmonial2 from '../../../assets/images/test22.png';
 import playstore from '../../../assets/images/play-store.png';
 import Faq from 'react-faq-component';
 import faqimg from '../../../assets/images/faqimg.png';
 import ScrollAnimation from 'react-animate-on-scroll';
-
+import { TopJobLists } from '../../utils/apiCalls';
+import axios from 'axios';
 
 const AboutUs = () => {
+    const [topJobLists, setTopJobLists] = useState([]);
+    const [alertText, setAlertText] = useState('');
+    const [isLoading, setLoading] = useState(true);
+
     const data = {
         title: "FAQ's",
         rows: [
@@ -35,6 +46,31 @@ const AboutUs = () => {
             }]
     }
 
+    // useEffect(() => {
+    //     getTopJobLists('');
+    // }, []);
+
+    // const getTopJobLists = () => {
+    //     TopJobLists((res) => {
+    //         const { message, statusCode, data } = res;
+    //         setTopJobLists(data);
+    //         setAlertText(message);
+    //         console.log(data);
+    //     });
+    // };
+
+    const baseurl = "https://mediabird.in/kaamkeeda/";
+
+    useEffect(() => {
+        axios.get(`${baseurl}api/top-job-lists`).then((response) => {
+            setTopJobLists(response.data.data.slice(0, 12));
+            setLoading(false);
+            console.log(response.data.data);
+            console.log(response.data.data.slice(0, 12));
+        });
+    }, []);
+
+
     return (
         <div>
             <div className='about' id='about-us'>
@@ -50,7 +86,9 @@ const AboutUs = () => {
                         <div className='about__section section1'>
                             <ScrollAnimation animateIn='fadeIn'
                                 animateOut='fadeOut' delay={300}>
-                                <img src={icon} alt='' />
+                                <div className='about__section__image'>
+                                    <img src={icon3} alt='' />
+                                </div>
                                 <h5>About Us</h5>
                                 <p>Kaam Keeda is an online platform that helps micro, small and medium sized organisations
                                     find qualified talent in an easy, hassle free, affordable manner.</p>
@@ -59,7 +97,9 @@ const AboutUs = () => {
                         <div className='about__section section2'>
                             <ScrollAnimation animateIn='fadeIn'
                                 animateOut='fadeOut' delay={300}>
-                                <img src={icon} alt='' />
+                                <div className='about__section__image'>
+                                    <img src={icon2} alt='' />
+                                </div>
                                 <h5>Mission</h5>
                                 <p>Our mission is to ensure everyone who desires to find a job has access to the right jobs by
                                     bridging the gap between employers & employees in Micro, Small and Medium enterprises and
@@ -69,7 +109,9 @@ const AboutUs = () => {
                         <div className='about__section section3'>
                             <ScrollAnimation animateIn='fadeIn'
                                 animateOut='fadeOut' delay={300}>
-                                <img src={icon} alt='' />
+                                <div className='about__section__image'>
+                                    <img src={icon1} alt='' />
+                                </div>
                                 <h5>Vision</h5>
                                 <p>Our vision is to provide an user friendly platform designed with a special focus on MSME’s and
                                     grey collar talent.</p>
@@ -171,7 +213,19 @@ const AboutUs = () => {
                         <h1>Top Job Listing</h1>
                     </div>
                     <div className='job-listing__sections'>
-                        <div className='job-listing__section'>
+                        {topJobLists?.length ? topJobLists?.length && topJobLists?.map((jobs, index) => {
+                            return (
+                                <div className='job-listing__section' key={index}>
+                                    <ScrollAnimation animateIn='fadeIn'
+                                        animateOut='fadeOut' delay={300}>
+                                             <img src={iconjob} alt='' />
+                                        <h4>{jobs?.company_detail?.name}</h4>
+                                    </ScrollAnimation>
+                                </div>)
+                        }) : (<div className='empty-cart-content'>No Products To Display</div>)
+
+                        }
+                        {/* <div className='job-listing__section'>
                             <ScrollAnimation animateIn='fadeIn'
                                 animateOut='fadeOut' delay={300}>
                                 <img src={iconblue} alt='' />
@@ -219,14 +273,7 @@ const AboutUs = () => {
                                 <img src={iconblue} alt='' />
                                 <h4>Jobs</h4>
                             </ScrollAnimation>
-                        </div>
-                        <div className='job-listing__section'>
-                            <ScrollAnimation animateIn='fadeIn'
-                                animateOut='fadeOut' delay={300}>
-                                <img src={iconblue} alt='' />
-                                <h4>Jobs</h4>
-                            </ScrollAnimation>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -244,7 +291,7 @@ const AboutUs = () => {
                             <p>Kaam Keeda is a easy to use job portal. Being a student I earn extra money over the weekends through KK’s weekend job service. </p>
                             <h4>,,</h4>
                             <div className='testmonials__section'>
-                                <img src={testmonial} alt='' />
+                                <img src={testmonial2} alt='' />
                                 <div className='testmonials__content'>
                                     <h3>Sankruti Sompura</h3>
                                     <h6>Andra Pradesh</h6>
@@ -256,7 +303,7 @@ const AboutUs = () => {
                             <p>Being a fresher out of college, I was able to find a job within minutes through the Kaam Keeda feature of calling employers directly.  </p>
                             <h4>,,</h4>
                             <div className='testmonials__section'>
-                                <img src={testmonial} alt='' />
+                                <img src={testmonial1} alt='' />
                                 <div className='testmonials__content'>
                                     <h3>Mohammed Salman</h3>
                                     <h6>Andra Pradesh</h6>
@@ -268,7 +315,7 @@ const AboutUs = () => {
                             <p>Kaam Keeda’s support team was extremely helpful in providing with a professional resume and mock interview. They also personally assisted me with finding a suitable job.</p>
                             <h4>,,</h4>
                             <div className='testmonials__section'>
-                                <img src={testmonial} alt='' />
+                                <img src={testmonial1} alt='' />
                                 <div className='testmonials__content'>
                                     <h3>Satish Mishra</h3>
                                     <h6>Andra Pradesh</h6>
@@ -280,7 +327,7 @@ const AboutUs = () => {
                             <p>Found multiple weekend jobs and small gigs through Kaam Keeda. </p>
                             <h4>,,</h4>
                             <div className='testmonials__section'>
-                                <img src={testmonial} alt='' />
+                                <img src={testmonial2} alt='' />
                                 <div className='testmonials__content'>
                                     <h3>Naima Abdulla</h3>
                                     <h6>Andra Pradesh</h6>
@@ -292,7 +339,7 @@ const AboutUs = () => {
                             <p>Career counselling at Kaam Keeda is excellent, the team has a lot of experience in various fields. Highly recommended. </p>
                             <h4>,,</h4>
                             <div className='testmonials__section'>
-                                <img src={testmonial} alt='' />
+                                <img src={testmonial1} alt='' />
                                 <div className='testmonials__content'>
                                     <h3>Sankar Bagrecha</h3>
                                     <h6>Andra Pradesh</h6>
@@ -434,7 +481,7 @@ const AboutUs = () => {
                 <div className='playstore__container'>
                     <div className='playstore__section'>
                         <h1>Download our <span>App</span></h1>
-                        <a><img src={playstore} alt='' /></a>
+                        <a href='https://play.google.com/store/apps/details?id=com.kaamkeeda&hl=en&gl=in' target='_blank'><img src={playstore} alt='' /></a>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 .footer {
     padding: 40px;
-    background-color: #FEEBDD;
+    background-color: #feebdd;
 
     &__container {
         padding: 40px 40px 40px 20px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
 
     &__section {
@@ -13,7 +13,7 @@
 
         h2 {
             font-size: 24px;
-            color: #123F5C !important;
+            color: #123f5c !important;
             margin: 20px 0 10px 0;
             text-decoration: none !important;
         }
@@ -21,7 +21,7 @@
         h6 {
             font-size: 18px;
             margin: 20px 0 10px 0;
-            color: #123F5C !important;
+            color: #123f5c !important;
             text-decoration: none !important;
         }
     }
@@ -43,7 +43,7 @@
         a {
             h6 {
                 a {
-                    color: #123F5C !important;
+                    color: #123f5c !important;
                     text-decoration: none !important;
                 }
             }
@@ -60,7 +60,7 @@
             .fa {
                 color: white;
                 font-size: 20px;
-                background-color: #00214A;
+                background-color: #00214a;
                 padding: 10px 15px;
                 border-radius: 5px;
             }
@@ -68,28 +68,46 @@
     }
 
     &__right {
-        width: 18%;
+        width: 22%;
     }
 
     &__phone {
         display: flex;
         align-items: baseline;
+        margin-top: 1.7vw;
 
         .fa {
-            color: #123F5C;
+            color: #123f5c;
             font-size: 25px;
             margin-right: 10px;
+        }
+        &__numbers {
+            display: flex;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                font-size: 1.2vw;
+                color: #123f5c;
+                font-weight: 600;
+            }
         }
     }
 
     &__email {
         display: flex;
         align-items: baseline;
+        margin-top: 1vw;
 
         .fa {
-            color: #123F5C;
+            color: #123f5c;
             font-size: 20px;
             margin-right: 10px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.2vw;
+            color: #123f5c;
+            font-weight: 600;
         }
     }
 
@@ -98,14 +116,14 @@
         align-items: baseline;
 
         .fa {
-            color: #123F5C;
+            color: #123f5c;
             font-size: 20px;
             margin-right: 10px;
         }
     }
 }
 
-@media screen and (min-width:320px) and (max-width:760px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
     .footer {
         padding: 20px;
 
@@ -133,6 +151,18 @@
             }
         }
 
+        &__phone {
+            align-items: center;
+            .fa {
+                margin-top: 10px;
+            }
+            &__numbers {
+                margin-top: 20px;
+                a {
+                    font-size: 3.5vw;
+                }
+            }
+        }
         &__center2 {
             padding: 20px 0 0 25px;
 
@@ -140,18 +170,25 @@
                 margin: 0 0 10px 0;
             }
         }
+        &__email {
+            a {
+                font-size: 3.5vw;
+            }
+        }
 
         &__right {
             padding: 20px 0 0 25px;
+            width: 90%;
 
             h6 {
                 margin: 0 0 10px 0;
+                font-size: 4vw;
             }
         }
     }
 }
 
-@media screen and (min-width:768px) and (max-width:1020px) {
+@media screen and (min-width: 768px) and (max-width: 1020px) {
     .footer {
         &__container {
             padding: 0;
@@ -182,7 +219,7 @@
     }
 }
 
-@media screen and (min-width:1024px) and (max-width:1420px) {
+@media screen and (min-width: 1024px) and (max-width: 1420px) {
     .footer {
         &__container {
             padding: 0;

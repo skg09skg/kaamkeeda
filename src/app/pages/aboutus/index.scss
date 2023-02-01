@@ -29,11 +29,21 @@
     }
 
     &__section {
-        img {
-            width: 8%;
-            padding: 40px;
-            border-radius: 50%;
+        .animated {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__image {
+            width: 10vw;
+            height: 10vw;
             background-color: #00214a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            img {
+            }
         }
 
         h5 {
@@ -332,7 +342,7 @@
 
         img {
             width: 25%;
-            height: 100%;
+            // height: 100%;
         }
     }
 
@@ -356,6 +366,9 @@
     background-color: white;
     padding: 40px 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .bXvhnh {
